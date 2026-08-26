@@ -1,0 +1,154 @@
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Saya</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+    <!-- Header & Navigasi -->
+    <header>
+         <div class="logo">Portofolio<span>.</span></div>
+ 
+ <div class="nav-right">
+     <nav>
+         <ul class="nav-menu" id="nav-menu">
+             <li><a href="#home">Home</a></li>
+             <li><a href="#tentang">Tentang</a></li>
+             <li><a href="#pendidikan">Pendidikan</a></li>
+             <li><a href="#pengalaman">pengalaman</a></li>
+             <li><a href="#kontak">Kontak</a></li>
+         </ul>
+     </nav>
+     
+     <!-- Tombol Dark Mode -->
+     <button id="theme-toggle" class="theme-btn">🌙</button>
+     
+     <!-- Tombol Hamburger -->
+     <div class="hamburger" id="hamburger">
+         <span class="bar"></span>
+         <span class="bar"></span>
+         <span class="bar"></span>
+     </div>
+ </div>
+    </header>
+
+    <!-- Hero / Home Section dengan Foto Profil -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="profile-img-container">
+                <!-- Ganti 'profile.jpg' dengan nama/URL foto Anda -->
+                <img src="fasa.jpg" alt="" class="profile-img">
+            </div>
+            <div class="hero-text">
+                <h1> <span>Fahmi Dan Sani</span></h1>
+                <p>Web Developer & Designer</p>
+                <a href="#about " class="btn">Lihat Karya</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tentang Saya -->
+    <section id="about" class="about">
+        <h2>Tentang Kami</h2>
+        <p>Saya seorang pengembang web untuk menciptakan tampilan web yang menarik, modern.</p>
+    </section>
+
+    <!-- Proyek -->
+    <section id="pendidikan" class="pendidikan">
+        <h2>Pendidikan</h2>
+        <div class="pendidikan-grid">
+            <div class="card">
+                <h3>SDN</h3>
+                <p>SDN BEOR 01 DAN SDN BEOR 02</p>
+                <p>2015-2021</p>
+            </div>
+            <div class="card">
+                <h3>SMP</h3>
+                <p>Mts Riyadhul Huda</p>
+                <p>2021-2024</p>
+            </div>
+            <div class="card">
+                <h3>Smk</h3>
+                <p>SMK Muthia Harapan Cicalengka</p>
+                <p>2024-2027</p>
+            </div>
+        </div>
+    </section>
+    
+        <section id="pengalaman" class="about">
+        <h2>Pengalaman</h2>
+        <p>Membuat website sederhana,logo, ui/ux dll.</p>
+    </section>
+
+         <section id="kontak" class="pendidikan">
+        <h2>Kontak</h2>
+        <div class="pendidikan-grid">
+            <div class="card">
+                
+                <table>
+                    <tr>
+                        <td>Whatsapp</td>
+                        <td>:</td>
+                        
+                        <td><a href="https://wa.me/qr/N2SGMB6WHAM5M1" >+62821-1421-3762</a>
+                        </td>
+                    </tr>
+                    
+                                        <tr>
+                        <td>Gmail</td>
+                        <td>:</td>
+                        
+                        <td><a href="mailto:sanihusna1910@gmail.com">
+kamifasa1910@gmail.com</a>
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+
+
+
+    <!-- Kontak -->
+    <section id="contact" class="contact">
+        <h2>Hubungi Saya</h2>
+        <p>Tertarik untuk bekerja sama? Kirimkan pesan melalui tombol di bawah.</p>
+        <a href="https://wa.me/qr/N2SGMB6WHAM5M1" class="btn">Kirim Pesan</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Fasa. All rights reserved.</p>
+    </footer>
+<script>// Toggle Hamburger Menu
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
+
+hamburger.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Tutup menu saat salah satu link diklik
+document.querySelectorAll('.nav-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+    });
+});
+
+// Toggle Dark Mode
+const themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    
+    // Ubah ikon tombol
+    if (document.body.classList.contains('dark-mode')) {
+        themeToggleBtn.textContent = '☀️';
+    } else {
+        themeToggleBtn.textContent = '🌙';
+    }
+});
+</script>
+</body>
+</html>
